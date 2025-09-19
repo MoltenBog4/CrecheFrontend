@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
   const sendMessage = async () => {
@@ -12,17 +12,20 @@ function App() {
     setMessages(prev => [...prev, userMessage]);
 
     try {
-      const res = await fetch('http://localhost:8080/api/chat', {
+      const res = await fetch('http://localhost:8086/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })
       });
 
-      const botText = await res.text();
-      const botMessage = { sender: 'bot', text: botText };
+      const data = await res.json();
+      const botMessage = { sender: 'bot', text: data.reply };
       setMessages(prev => [...prev, botMessage]);
     } catch (err) {
-      setMessages(prev => [...prev, { sender: 'bot', text: 'Oops! Something went wrong.' }]);
+      setMessages(prev => [...prev, {
+        sender: 'bot',
+        text: '⚠️ Oops! Something went wrong. Check backend/Ollama.'
+      }]);
     }
 
     setInput('');
@@ -42,6 +45,7 @@ function App() {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
           placeholder="Ask me about fees, hours, age groups..."
         />
         <button onClick={sendMessage}>Send</button>
