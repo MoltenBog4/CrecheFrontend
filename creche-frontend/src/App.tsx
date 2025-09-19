@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ChildRegisterPage from './pages/ChildRegisterPage'; // Adjust the path as needed
 import './App.css';
 
-function App() {
+function ChatPage() {
   const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
   const [input, setInput] = useState('');
 
@@ -31,6 +33,9 @@ function App() {
   return (
     <div className="App">
       <h2>🧸 Welcome to Crèche ChatBot</h2>
+      <nav>
+        <Link to="/">Chat</Link> | <Link to="/register">Register Child</Link>
+      </nav>
       <div className="chat-box">
         {messages.map((msg, index) => (
           <div key={index} className={`msg ${msg.sender}`}>
@@ -47,6 +52,17 @@ function App() {
         <button onClick={sendMessage}>Send</button>
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<ChatPage />} />
+        <Route path="/register" element={<ChildRegisterPage />} />
+      </Routes>
+    </Router>
   );
 }
 
