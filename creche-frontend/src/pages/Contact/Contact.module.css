@@ -1,0 +1,191 @@
+.contactPage {
+  font-family: 'Arial', sans-serif;
+  padding: 60px 20px;
+  background-color: #fefcff;
+  color: #333;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 1s ease-out;
+}
+
+.heroText h1 {
+  font-size: 3rem;
+  color: #4b0082;
+}
+
+.heroText p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mapSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: stretch;
+  animation: fadeIn 1s ease-out;
+}
+
+.mapWrapper {
+  flex: 1 1 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  height: 300px;
+}
+
+.mapWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contactInfo {
+  flex: 1 1 400px;
+  background-color: #f5efff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 1.2s ease-out;
+}
+
+.contactInfo h2 {
+  font-size: 1.6rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.contactInfo h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.contactInfo p {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* FORM SECTION */
+.formSection {
+  background-color: #f9f6ff;
+  padding: 40px 20px;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(106, 80, 255, 0.08);
+  animation: fadeIn 1.3s ease-out;
+}
+
+.formSection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4b0082;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 14px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: #a275ff;
+  box-shadow: 0 0 0 3px rgba(162, 117, 255, 0.2);
+}
+
+.contactForm button {
+  padding: 12px 20px;
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.contactForm button:hover {
+  background-color: #5500aa;
+}
+
+/* EXTRA CONTACT SECTION */
+.extraContact {
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: #f0e9ff;
+  border-radius: 16px;
+  text-align: center;
+  animation: fadeIn 1.4s ease-out;
+}
+
+.extraContact h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #4b0082;
+}
+
+.extraContact p {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.outlineBtn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid #6a0dad;
+  border-radius: 30px;
+  background-color: white;
+  color: #6a0dad;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.outlineBtn:hover {
+  background-color: #6a0dad;
+  color: white;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

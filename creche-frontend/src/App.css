@@ -1,44 +1,60 @@
+/* ----------- Base App Styles ----------- */
 .App {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  padding: 40px;
+  padding: 40px 20px;
+  background: #f9f9fb;
 }
 
+/* ----------- Chat Box Styles ----------- */
 .chat-box {
   max-height: 200px;
   overflow-y: auto;
   text-align: left;
   border: 1px solid #ccc;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  background: #fff;
+  border-radius: 6px;
 }
 
 .msg.user {
   color: #000;
 }
-
 .msg.bot {
   color: #007c89;
 }
 
+.chat-input {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
 .chat-input input {
-  width: 70%;
+  flex: 1;
   padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
-
 .chat-input button {
-  padding: 10px;
-  margin-left: 5px;
+  padding: 10px 16px;
+  background-color: #6a50ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.chat-input button:hover {
+  background-color: #553bf3;
 }
 
-/* Popup styles */
+/* ----------- Modal / Popup Styles ----------- */
 .popup-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,19 +62,71 @@
 }
 
 .popup-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 6px;
-  width: 400px;
+  background-color: #fff;
+  padding: 32px 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
   position: relative;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 18px;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
   background: none;
   border: none;
+  color: #444;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ----------- Home Section Styles ----------- */
+.home {
+  background-color: #fff;
+  padding: 48px 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  margin: 0 auto;
+}
+.home h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.home p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+.home button {
+  margin: 0 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background-color: #6a50ff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.home button:hover {
+  background-color: #553bf3;
 }

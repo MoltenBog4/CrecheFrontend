@@ -1,0 +1,278 @@
+.servicesPage {
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfbff;
+  color: #2c2c2c;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.heroText {
+  flex: 1 1 500px;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.heroText h1 {
+  font-size: 3rem;
+  color: #6a0dad;
+  margin-bottom: 12px;
+}
+
+.heroText p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.heroImage {
+  flex: 1 1 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  animation: scaleIn 0.9s ease-in-out forwards;
+}
+
+.heroImage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ---------------- WHAT WE OFFER ---------------- */
+.offerings {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.offerings h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #4b0082;
+}
+
+.offerings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.offerings li {
+  font-size: 1.1rem;
+  padding: 8px;
+  color: #444;
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+/* ---------------- SERVICE DETAIL SECTION ---------------- */
+.detailedServices {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  .detailedServices {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.serviceBlock {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background-color: #f3ecff;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(106, 13, 173, 0.05);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.serviceBlock img {
+  width: 140px;
+  border-radius: 14px;
+}
+
+.serviceBlock h3 {
+  font-size: 1.5rem;
+  color: #6a0dad;
+}
+
+.serviceBlock p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ---------------- EDUCATIONAL SECTION ---------------- */
+.educationalLayer {
+  text-align: center;
+  background-color: #efe5ff;
+  padding: 60px 30px;
+  border-radius: 20px;
+  margin-bottom: 80px;
+  animation: slideIn 0.9s ease-out;
+}
+
+.educationalLayer h2 {
+  font-size: 2rem;
+  color: #4b0082;
+  margin-bottom: 20px;
+}
+
+.educationalLayer p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: auto;
+  color: #333;
+}
+
+.educationalLayer img {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 14px;
+}
+
+/* ---------------- BLOG SECTION ---------------- */
+.blogHighlight {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.blogContent {
+  flex: 1 1 500px;
+}
+
+.blogContent h2 {
+  font-size: 2rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.blogContent p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.blogImage {
+  flex: 1 1 400px;
+}
+
+.blogImage img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* ---------------- CALL TO ACTION ---------------- */
+.ctaLayer {
+  background-color: #f9f6ff;
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 20px;
+}
+
+.ctaLayer h2 {
+  font-size: 2rem;
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+
+.ctaLayer p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: auto;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.primaryBtn {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.primaryBtn:hover {
+  background-color: #4b0082;
+}
+
+.secondaryBtn {
+  background-color: #f3ecff;
+  color: #4b0082;
+  border: 2px solid #6a0dad;
+}
+
+.secondaryBtn:hover {
+  background-color: #e6d9ff;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

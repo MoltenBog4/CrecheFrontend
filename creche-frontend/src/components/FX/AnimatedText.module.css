@@ -1,0 +1,42 @@
+.wrap {
+  display: inline-block;
+  position: relative;
+  /* timing */
+  --d: 35ms;    /* per-item delay */
+  --t: 700ms;   /* duration */
+  --e: cubic-bezier(.22,.7,.24,1); /* easing */
+}
+
+/* accessibility helper */
+.srOnly {
+  position: absolute; inline-size: 1px; block-size: 1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+
+/* every unit (char/word/line) */
+.item {
+  display: inline-block;
+  transition:
+    transform var(--t) var(--e) calc(var(--i) * var(--d)),
+    opacity   var(--t) var(--e) calc(var(--i) * var(--d)),
+    filter    var(--t) var(--e) calc(var(--i) * var(--d));
+  will-change: transform, opacity, filter;
+  opacity: 0;
+}
+.space { white-space: pre; }
+
+/* EFFECTS (starting state) */
+.rise .item   { transform: translateY(.8em); filter: blur(2px); }
+.slide .item  { transform: translateX(.6em); filter: blur(1px); }
+.blur  .item  { transform: none;             filter: blur(6px); }
+.pop   .item  { transform: scale(.86);       filter: blur(1px); }
+
+/* when in view */
+.in.rise  .item,
+.in.slide .item,
+.in.blur  .item,
+.in.pop   .item {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}

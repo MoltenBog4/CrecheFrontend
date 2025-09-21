@@ -1,0 +1,10 @@
+.header { position: sticky; top: 0; z-index: 1000; background: #fff; border-bottom: 1px solid #e8edf3; }
+.container { max-width: 1600px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 24px; }
+.brand { font-weight: 900; color: #1c3c6b; text-decoration: none; }
+.nav { display: flex; gap: 18px; }
+.nav a { text-decoration: none; color: #243c64; font-weight: 600; }
+.active { color: #0b5bd3; }
+.auth { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+.linkBtn { text-decoration: none; color: #0b5bd3; font-weight: 800; }
+.primaryBtn { text-decoration: none; color: #fff; background: #0b5bd3; padding: 8px 14px; border-radius: 999px; font-weight: 800; }
+.ghost { background: transparent; border: 1px solid #cddaf0; padding: 8px 14px; border-radius: 999px; color: #243c64; cursor: pointer; }
