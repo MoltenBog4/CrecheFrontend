@@ -31,7 +31,7 @@ export default function SubscribeForm({ onSuccess, compact = false }) {
       setStatus("loading");
 
       // Try your real backend first (adjust the URL if needed)
-      const res = await fetch("http://localhost:8080/api/subscribe", {
+      const res = await fetch("http://localhost:8086/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

@@ -9,6 +9,7 @@ import SignUp from '../pages/Auth/SignUp.jsx';
 import ParentRegisterPage from '../pages/Register/ParentRegisterPage.tsx';
 import ChildRegisterPage from '../pages/Register/ChildRegisterPage.tsx';
 import NotFound from '../pages/NotFound/NotFound.jsx';
+import Newsletter from './pages/Newsletter/Newsletter.jsx';
 
 export default function AppRoutes() {
   return (
@@ -21,6 +22,7 @@ export default function AppRoutes() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/register/parent" element={<ParentRegisterPage />} />
       <Route path="/register/child" element={<ChildRegisterPage />} />
+      <Route path="/newsletter" element={<Newsletter />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

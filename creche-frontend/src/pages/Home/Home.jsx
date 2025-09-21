@@ -3,6 +3,7 @@ import styles from './Home.module.css';
 import useReveal from '../../../hooks/useReveal.js';
 import Newsletter from '../../components/Newsletter/SubscribeForm.jsx';
 
+
 function AnimatedText({ as: Tag = 'h1', text, className = '', delay = 28 }) {
   const chars = Array.from(text);
   return (
@@ -161,28 +162,8 @@ export default function Home({ onOpenSubscribe }) {
         </div>
       </section>
 
-      {/* NEWSLETTER */}
-      <section className={styles.news} data-reveal data-effect="fade-up" data-replay id="newsletter">
-        <div className={styles.newsArt}>
-          <img
-            src="/images/img2.png"
-            alt="Two smiling children playing at a table with colorful toys"
-          />
-        </div>
 
-        <div className={styles.newsCopy}>
-          <h2 className={styles.newsTitle}>Subscribe To Our Newsletter</h2>
-          <p className={styles.newsSub}>
-            Get news, updates and early-learning tips—straight to your inbox.
-          </p>
 
-          <div className={styles.newsForm}>
-            <Newsletter />
-          </div>
-
-          <p className={styles.privacy}>We respect your privacy. Unsubscribe anytime.</p>
-        </div>
-      </section>
     </main>
   );
 }

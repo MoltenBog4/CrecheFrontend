@@ -48,7 +48,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} Milo’s House</span>
+        <span>© {new Date().getFullYear()} Little Einsteins</span>
         <ul className={styles.bottomLinks}>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/services">Services</NavLink></li>

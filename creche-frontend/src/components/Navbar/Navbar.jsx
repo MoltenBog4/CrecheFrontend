@@ -12,6 +12,7 @@ export default function Navbar({ onOpenSubscribe }) {
           <NavLink to="/about" className={({isActive}) => isActive ? styles.active : undefined}>About Us</NavLink>
           <NavLink to="/services" className={({isActive}) => isActive ? styles.active : undefined}>Services</NavLink>
           <NavLink to="/contact" className={({isActive}) => isActive ? styles.active : undefined}>Contact Us</NavLink>
+
         </nav>
 
         <div className={styles.auth}>

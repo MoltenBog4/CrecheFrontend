@@ -16,7 +16,7 @@ export default function Contact() {
       <section className={styles.mapSection}>
         <div className={styles.mapWrapper}>
           <iframe
-            title="Little Gems Location"
+            title="Little Einsteins Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.240249103365!2d31.07120321467333!3d-29.7271819820025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7063b234e317f%3A0xa05850dfae0c2b3a!2sUmhlanga%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1695399038355"
             allowFullScreen=""
             loading="lazy"
