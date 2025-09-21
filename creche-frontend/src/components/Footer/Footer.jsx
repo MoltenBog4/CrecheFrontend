@@ -9,7 +9,7 @@ export default function Footer() {
           <div className={styles.logoRow}>
             <div className={styles.logo} aria-hidden="true">🌳</div>
             <div className={styles.brand}>
-              <strong>Little Gems</strong>
+              <strong>Little Einsteins</strong>
               <span>Driven by excellence, motivated by love</span>
             </div>
           </div>

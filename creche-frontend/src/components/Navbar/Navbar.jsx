@@ -5,7 +5,7 @@ export default function Navbar({ onOpenSubscribe }) {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <NavLink to="/" className={styles.brand}>Milo’s House</NavLink>
+        <NavLink to="/" className={styles.brand}>   Little Einsteins</NavLink>
 
         <nav className={styles.nav} aria-label="Primary">
           <NavLink to="/" end className={({isActive}) => isActive ? styles.active : undefined}>Home</NavLink>
